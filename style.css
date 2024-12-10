@@ -1,6 +1,5 @@
 ﻿/*Variables!!!!*/
 :root {
-	--phone-display-width: 680px;
 	--main-bg-color: #0a192f;
 	--container-bg-color: #021a33;
 	--container-border-color: #4db8ff;
@@ -141,7 +140,7 @@ footer .socials a:hover {
 }
 
 /* Responsive styling */
-@media (max-width: var(--phone-display-width)) {
+@media (max-width: 350px) {
 	footer .socials {
 		flex-direction: column;
 		gap: 10px;
@@ -160,35 +159,8 @@ ul {
 	text-align: center; /* Center inline-block elements horizontally */
 }
 
-/*WIP*/
+/* NAV BUTTONS START */
 
-/* PHONE DISPLAY SETUP */
-@media (max-width: var(--phone-display-width)) {
-	ul {
-		/* Ensure UL stretches */
-		height: 100%;
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: stretch;
-		width: 100%;
-		padding: 0;
-	}
-
-	li {
-		/* Ensure LI takes full width */
-		width: 100%;
-	}
-
-	nav a {
-		/* Ensure links fill and are centered */
-		display: block;
-		text-align: center;
-		padding: 10px;
-	}
-}
-
-/*ENSURE BUTTONS SHOW IN GRID OR SINGLE LINE ONLY*/
 .button-container {
 	display: flex;
 	flex-direction: row;
@@ -200,18 +172,24 @@ ul {
 }
 
 button, .button-container a {
-	text-align: center;
+	text-align: center; /* ensures text is centered */
 }
 
-/*525 is exactly when it becomes 2 lines*/
-@media (max-width: 525px) {
+@media (max-width: 550px) {
 	.button-container {
 		flex-direction: column;
 		align-items: stretch;
 	}
 }
 
-/*END WIP*/
+/* NOT WORKING CURRENTLY */
+/* trying to make the page show which page is currently viewed  */
+.button-container .active {
+	background: #ffffff; /* Highlighted background for active state */
+	color: #f10b29; /* Text color for active state */
+}
+
+/* NAV BUTTONS END */
 
 h1, .name, .subtitle, .code-snippet {
 	color: var(--secondaryText-color);
@@ -225,6 +203,7 @@ p {
 	color: var(--primaryText-color);
 }
 
+/* IS THIS BEING USED? */
 button, a {
 	border: 2px solid #4db8ff;
 	border-radius: 10px;

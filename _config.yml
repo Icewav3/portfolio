@@ -1,0 +1,24 @@
+﻿title: "Cole Dorman's portfolio"
+description: "A collection of my work"
+
+# Base and URL configurations for GitHub Pages
+baseurl: "" # Leave this empty for user GitHub Pages root domains
+url: "https://icewav3.github.io"
+
+# Updated folder structure to point to `src/` subfolder
+layouts_dir: src/_layouts       # Layout templates
+includes_dir: src/_includes     # Partials or reusable components
+sass_dir: src/_sass             # Sass/SCSS styles
+collections_dir: src            # Base directory for Jekyll collections, like posts
+
+# Static files or other assets (CSS, JS, Images) in `src/assets/`
+assets_dir: src/assets
+
+# Specify the new output folder for the built site
+destination: src/_site
+
+# Optional: Exclude the `_site` folder and other non-relevant files from the build process
+exclude:
+  - _site
+  - Gemfile
+  - Gemfile.lock
