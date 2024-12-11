@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <title>{{ page.title }}</title>
+    <!-- Link to CSS files -->
+    <link href="{{ '/assets/css/style.css' | relative_url }}" rel="stylesheet">
+    <link href="{{ '/assets/fontawesome/css/fontawesome.css' | relative_url }}" rel="stylesheet">
+    <link href="{{ '/assets/fontawesome/css/brands.css' | relative_url }}" rel="stylesheet">
+</head>
+<body>
+<!-- Background styling -->
+<div class="container">
+    <div class="background-light"></div>
+    <div class="background-light"></div>
+    {% include header.html %}
+    <main>
+        {{ content }}
+    </main>
+    {% include footer.html %}
+</div>
+</body>
+</html>

@@ -15,7 +15,7 @@ collections_dir: src            # Base directory for Jekyll collections, like po
 assets_dir: src/assets
 
 # Specify the new output folder for the built site
-destination: src/_site
+destination: _site
 
 # Optional: Exclude the `_site` folder and other non-relevant files from the build process
 exclude:
