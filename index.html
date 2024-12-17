@@ -14,15 +14,9 @@
 <div class="container">
     <div class="background-light"></div>
     <div class="background-light"></div>
-    <header>
-        <nav class="button-container">
-            <!-- Navigation links -->
-            <button onclick="window.location.href='index.html'">Overview</button>
-            <button onclick="window.location.href='projects.html'">Projects</button>
-            <button onclick="window.location.href='experience.html'">Experience</button>
-            <button onclick="window.location.href='aboutMe.html'">About me</button>
-        </nav>
-    </header>
+
+    <!-- Header will be inserted here -->
+    <header id="header"></header>
 
     <main>
         <section id="intro">
@@ -32,17 +26,24 @@
         </section>
     </main>
 
-    <footer>
-        <p>My socials:</p>
-        <div class="socials">
-            <button onclick="window.open('https://github.com/Icewav3', '_blank')">
-                <i class="fa-brands fa-github fa-lg"></i> GitHub
-            </button>
-            <button onclick="window.open('https://www.linkedin.com/in/cole-dorman-313b0a238/', '_blank')">
-                <i class="fa-brands fa-linkedin fa-lg"></i> LinkedIn
-            </button>
-        </div>
-    </footer>
+    <!-- Footer will be inserted here -->
+    <footer id="footer"></footer>
 </div>
+
+<script>
+    // Function to load an HTML file and insert its content into a specified element
+    function loadHTML(id, file) {
+        fetch(file)
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById(id).innerHTML = data;
+            })
+            .catch(error => console.error('Error loading file:', error));
+    }
+
+    // Load header and footer content dynamically
+    loadHTML("header", "header.html");
+    loadHTML("footer", "footer.html");
+</script>
 </body>
 </html>
